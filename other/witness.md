@@ -17,10 +17,46 @@ NP 问题中的概念：
 - 解锁脚本需要的数据
 - 证明花费权的数据
 - 公开可见的
+```go
+// 定义 Taproot 见证的基本结构
+type TaprootWitness struct {
+    // 关键路径花费（Key-Path Spend）的见证
+    // 仅包含 Schnorr 签名（64字节）
+    KeyPathWitness []byte // 64-byte Schnorr signature
+
+    // 脚本路径花费（Script-Path Spend）的见证
+    // 包含控制块、脚本和脚本输入
+    ScriptPathWitness struct {
+        ControlBlock []byte    // 控制块（包含内部密钥和默克尔路径）
+        Script      []byte     // 脚本
+        ScriptData  [][]byte   // 脚本执行所需的数据
+    }
+}
+
+```
+
 2. ZK 见证
 - 证明者知道的秘密值
 - 满足约束的私有输入
 - 不会泄露具体值
+```go
+type Witness struct {
+	accountTree        bsmt.SparseMerkleTree       // 账户Merkle树
+	totalOpsNumber     uint32                      // 总操作数
+	witnessModel       WitnessModel                // 数据库模型
+	ops                map[int][]utils.AccountInfo // 用户账户信息
+	cexAssets          []utils.CexAssetInfo        // CEX资产信息
+	db                 *gorm.DB                    // 数据库连接
+	ch                 chan BatchWitness           // 批次见证数据通道
+	quit               chan int                    // 退出信号通道
+	accountHashChan    map[int][]chan []byte       // 账户哈希通道
+	currentBatchNumber int64                       // 当前批次号
+	// 批次号映射
+	batchNumberMappingKeys   []int
+	batchNumberMappingValues []int
+}
+
+```
 
 <br/>
 
