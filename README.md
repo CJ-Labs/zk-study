@@ -35,5 +35,5 @@
   - [ ] [Groth16](./15.Grot16.md)
   - [ ] [Plonk](./18.Plonk.md)
   - [ ] [zk-STARK](./19.zk-STARK.md)
-
- 签名算法
+- [ ] 其他杂项
+  - [🪜] [见证](./other/witness.md)
