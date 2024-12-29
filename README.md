@@ -10,10 +10,10 @@
   - [ ] [同态加密]()
 - [ 🪜 ] 椭圆曲线
   - [✅] [椭圆曲线](./ecc/1.椭圆曲线.md)
-  - [ ] [ECDSA算法](./ecc/2.ECDSA算法.md)
-  - [ ] [EdDSA算法](./ecc/3.EdDSA算法.md)
-  - [ ] [BN254曲线](./ecc/4.BN254曲线.md)
-  - [ ] [BLS算法](./ecc/5.BLS算法.md)
+  - [🪜] [ECDSA算法](./ecc/2.ECDSA算法.md)
+  - [🪜] [EdDSA算法](./ecc/3.EdDSA算法.md)
+  - [✅] [BN254曲线](./ecc/4.BN254曲线.md)
+  - [✅] [BLS算法](./ecc/5.BLS算法.md)
 - [ ] 线性代数
   - [ ] [向量](.linearAlgebra/1.向量.md)
   - [ ] [矩阵](.linearAlgebra/2.矩阵.md)
@@ -36,4 +36,4 @@
   - [ ] [Plonk](./18.Plonk.md)
   - [ ] [zk-STARK](./19.zk-STARK.md)
 
- 
+ 签名算法
