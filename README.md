@@ -16,7 +16,7 @@
   - [✅] [BN254曲线](./ecc/4.BN254曲线.md)
   - [✅] [BLS算法](./ecc/5.BLS算法.md)
 - [ ] 数据结构
-  - [ ] [Merkle树](./merkle/merkle.md)
+  - [✅ ] [Merkle树](./merkle/merkle.md)
 - [ ] 线性代数
   - [ ] [向量](.linearAlgebra/1.向量.md)
   - [ ] [矩阵](.linearAlgebra/2.矩阵.md)
