@@ -11,6 +11,7 @@
 - [ 🪜 ] 椭圆曲线
   - [✅] [椭圆曲线](./ecc/1.椭圆曲线.md)
   - [🪜] [ECDSA算法](./ecc/2.ECDSA算法.md)
+  - [🪜] [以太坊中的ECDSA算法](./ecc/2.1.以太坊中的ECDSA算法.md)
   - [🪜] [EdDSA算法](./ecc/3.EdDSA算法.md)
   - [✅] [BN254曲线](./ecc/4.BN254曲线.md)
   - [✅] [BLS算法](./ecc/5.BLS算法.md)
@@ -18,9 +19,11 @@
   - [ ] [向量](.linearAlgebra/1.向量.md)
   - [ ] [矩阵](.linearAlgebra/2.矩阵.md)
 - [ ] 承诺系统
-  - [ ] [承诺基础](./5.承诺.md)
-  - [ ] [Pedersen承诺](./6.Pedersen承诺.md)
-  - [ ] [KZG多项式承诺](./7.kzg多项式承诺.md)
+  - [✅] [承诺基础](./promise/1.承诺.md)
+  - [✅] [Pedersen承诺](./promise/2.Pedersen承诺.md)
+  - [✅] [KZG多项式承诺](./promise/3.kzg多项式承诺.md)
+  - [🪜] [Poseidon哈希函数](./promise/4.Poseidon哈希函数.md)
+- [✅] [见证](./other/witness.md)
 - [ ] 电路系统
   - [ ] [门电路](./8.门电路.md)
   - [ ] [约束系统](./9.约束系统.md)
@@ -35,5 +38,7 @@
   - [ ] [Groth16](./15.Grot16.md)
   - [ ] [Plonk](./18.Plonk.md)
   - [ ] [zk-STARK](./19.zk-STARK.md)
-- [ ] 其他杂项
-  - [✅] [见证](./other/witness.md)
+- [ ] 参考实战项目 [ZKMerkle Proof of Solvency](https://github.com/leo-shi-dacheng/zkmerkle-proof-of-solvency)
+  - [✅] [ZKMerkle Proof of Solvency 项目解析](./zkmerkle-proof-of-solvency/1.项目解析.md)
+  - [✅] [如何编写电路](./zkmerkle-proof-of-solvency/如何编写电路.md)
+ 
