@@ -15,6 +15,7 @@ https://github.com/CJ-Labs/cryptography-go
   - [🪜] [EdDSA算法](./ecc/3.EdDSA算法.md)
   - [✅] [BN254曲线](./ecc/4.BN254曲线.md)
   - [✅] [BLS算法](./ecc/5.BLS算法.md)
+  - [✅] [schnor](./ecc/6.shcnor.md)
 - [ ] 数据结构
   - [✅ ] [Merkle树](./merkle/merkle.md)
 - [ ] 线性代数
@@ -25,7 +26,10 @@ https://github.com/CJ-Labs/cryptography-go
   - [✅] [Pedersen承诺](./promise/2.Pedersen承诺.md)
   - [✅] [KZG多项式承诺](./promise/3.kzg多项式承诺.md)
   - [🪜] [Poseidon哈希函数](./promise/4.Poseidon哈希函数.md)
-- [✅] [见证](./other/witness.md)
+- [ ] other
+  - [✅] [见证](./other/witness.md)
+  - [✅] [证明](./other/证明.md)
+  - [✅] [非交互式](./other/非交互式.md)
 - [✅] 电路系统
   - [✅] [门电路](./circuit/1.门电路.md)
   - [✅] [约束系统](./circuit/2.约束系统.md)
