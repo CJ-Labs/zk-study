@@ -59,10 +59,22 @@ function changeCurve() {
 
 function updateCurveInfo() {
     const curveInfo = document.getElementById('curveInfo');
+    const curveParams = document.querySelector('.curve-params');
+    const selectedCurve = document.getElementById('curveSelect').value;
+    
+    // 更新信息内容
     curveInfo.innerHTML = `
-        <p>方程：${currentCurve.equation}</p>
-        <p>${currentCurve.description}</p>
+        <p><strong>方程：</strong>${currentCurve.equation}</p>
+        <p><strong>描述：</strong>${currentCurve.description}</p>
+        ${currentCurve.p ? `<p><strong>基域：</strong>p = ${currentCurve.p}</p>` : ''}
+        ${currentCurve.order ? `<p><strong>阶：</strong>n = ${currentCurve.order}</p>` : ''}
     `;
+    
+    // 更新边框颜色
+    curveParams.setAttribute('data-curve', selectedCurve);
+    
+    // 更新标题
+    document.querySelector('.curve-params h3').textContent = `${currentCurve.name} 参数`;
 }
 
 function showBaseCurve() {

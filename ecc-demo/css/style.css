@@ -48,6 +48,13 @@ button:hover {
     width: 300px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.curve-selector select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
 .curve-params {
@@ -55,6 +62,8 @@ button:hover {
     padding: 15px;
     background-color: #f5f5f5;
     border-radius: 4px;
+    border-left: 4px solid #4CAF50;
+    transition: all 0.3s ease;
 }
 
 #curveInfo {
@@ -65,4 +74,30 @@ button:hover {
 #curveInfo p {
     margin: 5px 0;
     font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 添加曲线特定的颜色 */
+.curve-params[data-curve="secp256k1"] {
+    border-left-color: #FF6B6B;
+}
+
+.curve-params[data-curve="secp256r1"] {
+    border-left-color: #4ECDC4;
+}
+
+.curve-params[data-curve="ed25519"] {
+    border-left-color: #45B7D1;
+}
+
+.curve-params[data-curve="curve25519"] {
+    border-left-color: #96CEB4;
+}
+
+.curve-params[data-curve="bn254"] {
+    border-left-color: #FFBE0B;
+}
+
+.curve-params[data-curve="bls12_381"] {
+    border-left-color: #9B5DE5;
 } 
