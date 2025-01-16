@@ -51,3 +51,6 @@ https://github.com/CJ-Labs/cryptography-go
   - [✅] [ZKMerkle Proof of Solvency 项目解析](./zkmerkle-proof-of-solvency/1.项目解析.md)
   - [✅] [如何编写电路](./zkmerkle-proof-of-solvency/如何编写电路.md)
  
+教程感觉越写越多。用爱发电有点累 <br/>
+准备搞一些动画方便理解！！！！
+![alt text](image-3.png)
