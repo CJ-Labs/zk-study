@@ -1,16 +1,97 @@
+// 定义不同的曲线参数
+const CURVES = {
+    secp256k1: {
+        name: "secp256k1",
+        equation: "y² = x³ + 7",
+        a: 0,
+        b: 7,
+        p: "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F",
+        description: "比特币和以太坊使用的曲线，Weierstrass形式，特点是计算效率高",
+        displayRange: [-5, 5]
+    },
+    secp256r1: {
+        name: "secp256r1 (NIST P-256)",
+        equation: "y² = x³ - 3x + 41058363725152142129326129780047268409114441015993725554835256314039467401291",
+        a: -3,
+        b: "0x5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B",
+        p: "0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF",
+        description: "NIST推荐的曲线，广泛用于TLS",
+        displayRange: [-5, 5]
+    },
+    ed25519: {
+        name: "Ed25519",
+        equation: "-x² + y² = 1 - (121665/121666)x²y²",
+        description: "Edwards曲线，用于EdDSA数字签名，特点是实现简单且安全",
+        displayRange: [-3, 3]
+    },
+    curve25519: {
+        name: "Curve25519",
+        equation: "y² = x³ + 486662x² + x",
+        description: "Montgomery曲线，用于密钥交换，特点是计算效率高",
+        displayRange: [-5, 5]
+    },
+    bls12_381: {
+        name: "BLS12-381",
+        equation: "y² = x³ + 4",
+        description: "配对友好曲线，用于零知识证明和聚合签名",
+        displayRange: [-3, 3]
+    },
+    bn254: {
+        name: "BN254",
+        equation: "y² = x³ + 3",
+        a: 0,
+        b: 3,
+        p: "0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47",
+        description: "Barreto-Naehrig曲线，广泛用于零知识证明系统（如zk-SNARKs），支持配对运算",
+        displayRange: [-4, 4],
+        order: "0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001"
+    }
+};
+
+let currentCurve = CURVES.secp256k1;
+
+function changeCurve() {
+    const selectedCurve = document.getElementById('curveSelect').value;
+    currentCurve = CURVES[selectedCurve];
+    updateCurveInfo();
+    showBaseCurve();
+}
+
+function updateCurveInfo() {
+    const curveInfo = document.getElementById('curveInfo');
+    curveInfo.innerHTML = `
+        <p>方程：${currentCurve.equation}</p>
+        <p>${currentCurve.description}</p>
+    `;
+}
+
 function showBaseCurve() {
     const ggbApi = document.ggbApplet;
-    // 清除之前的内容
     ggbApi.reset();
     
     // 设置视图范围
-    ggbApi.setCoordSystem(-5, 5, -5, 5);
+    const range = currentCurve.displayRange;
+    ggbApi.setCoordSystem(range[0], range[1], range[0], range[1]);
     
-    // 绘制 secp256k1 曲线: y² = x³ + 7
-    ggbApi.evalCommand("f(x) = sqrt(x^3 + 7)");
-    ggbApi.evalCommand("g(x) = -sqrt(x^3 + 7)");
+    // 根据不同曲线类型绘制
+    switch(currentCurve.name) {
+        case "Ed25519":
+            // Edwards 曲线
+            ggbApi.evalCommand("curve: -x² + y² = 1 - (121665/121666)x²y²");
+            break;
+        case "Curve25519":
+            // Montgomery 曲线
+            ggbApi.evalCommand("f(x) = sqrt(x³ + 486662x² + x)");
+            ggbApi.evalCommand("g(x) = -sqrt(x³ + 486662x² + x)");
+            break;
+        default:
+            // Weierstrass 形式
+            const equation = currentCurve.equation.split("=")[1];
+            ggbApi.evalCommand(`f(x) = sqrt(${equation})`);
+            ggbApi.evalCommand(`g(x) = -sqrt(${equation})`);
+    }
     
-    // 设置曲线颜色和样式
+    // 设置曲线样式
     ggbApi.setLineStyle("f", 1);
     ggbApi.setLineThickness("f", 2);
     ggbApi.setLineStyle("g", 1);

@@ -36,4 +36,33 @@ button:hover {
 #ggb-element {
     width: 800px;
     height: 600px;
+}
+
+.curve-selector {
+    margin: 20px 0;
+}
+
+.curve-selector select {
+    padding: 8px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.curve-params {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+#curveInfo {
+    text-align: left;
+    margin: 10px 0;
+}
+
+#curveInfo p {
+    margin: 5px 0;
+    font-size: 14px;
 } 

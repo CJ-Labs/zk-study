@@ -11,9 +11,19 @@
     <div class="container">
         <div class="controls">
             <h2>椭圆曲线操作演示</h2>
+            <div class="curve-selector">
+                <select id="curveSelect" onchange="changeCurve()">
+                    <option value="secp256k1">secp256k1 (比特币、以太坊)</option>
+                    <option value="secp256r1">secp256r1 (NIST P-256)</option>
+                    <option value="ed25519">Ed25519 (EdDSA)</option>
+                    <option value="curve25519">Curve25519 (X25519)</option>
+                    <option value="bn254">BN254 (零知识证明)</option>
+                    <option value="bls12_381">BLS12-381 (ZK & 聚合签名)</option>
+                </select>
+            </div>
             <div class="curve-params">
-                <h3>secp256k1 曲线参数</h3>
-                <p>y² = x³ + 7</p>
+                <h3>曲线参数</h3>
+                <div id="curveInfo"></div>
             </div>
             <div class="buttons">
                 <button onclick="showBaseCurve()">显示基础曲线</button>
