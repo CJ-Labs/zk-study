@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椭圆曲线演示</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h2>椭圆曲线操作演示</h2>
+            <div class="curve-params">
+                <h3>secp256k1 曲线参数</h3>
+                <p>y² = x³ + 7</p>
+            </div>
+            <div class="buttons">
+                <button onclick="showBaseCurve()">显示基础曲线</button>
+                <button onclick="demonstrateAddition()">点加法演示</button>
+                <button onclick="demonstrateMultiplication()">标量乘法演示</button>
+                <button onclick="showModularCurve()">显示模曲线</button>
+            </div>
+        </div>
+        <div id="ggb-element"></div>
+    </div>
+    <script src="js/curve-operations.js"></script>
+    <script src="js/geogebra.js"></script>
+</body>
+</html> 
