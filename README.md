@@ -42,9 +42,10 @@ https://github.com/CJ-Labs/cryptography-go
 - [ ] 证明系统
   - [ ] [Sigma协议](./sigma协议.md)
   - [✅] [零知识证明协议](./13.零知识证明协议.md)
+  
   - [🪜] [zk-SNARK协议](./14.zk-SNARK协议.md)
   - [✅] [Groth16](./15.Grot16.md)
-  - [ ] [Plonk](./18.Plonk.md)
+  - [🪜] [Plonk](./18.Plonk.md)
   - [ ] [zk-STARK](./19.zk-STARK.md)
 - [ ] 参考实战项目 [ZKMerkle Proof of Solvency](https://github.com/leo-shi-dacheng/zkmerkle-proof-of-solvency)
   - [✅] [ZKMerkle Proof of Solvency 项目解析](./zkmerkle-proof-of-solvency/1.项目解析.md)
