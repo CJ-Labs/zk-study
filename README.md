@@ -22,13 +22,13 @@ https://github.com/CJ-Labs/cryptography-go
 - [ ] 线性代数
   - [ ] [向量](.linearAlgebra/1.向量.md)
   - [ ] [矩阵](.linearAlgebra/2.矩阵.md)
-- [ ] 承诺系统
+- [ ] 承诺 和多项式系统
   - [✅] [承诺基础](./promise/1.承诺.md)
   - [✅] [Pedersen承诺](./promise/2.Pedersen承诺.md)
   - [✅] [KZG多项式承诺](./promise/3.kzg多项式承诺.md) Plonk用到
   - [🪜] [Poseidon哈希函数](./promise/4.Poseidon哈希函数.md)
-  - [ ] [FRI承诺](./promise/5.FRI承诺.md) `ZK-STARK` 和 `Plonky2` 用到
-  - [ ] [IPA承诺]() Halo2 用到
+  - [🪜] [FRI承诺](./promise/5.FRI承诺.md) `ZK-STARK` 和 `Plonky2` 用到
+  - [🪜] [IPA承诺](./promise/6.IPA承诺.md) Halo2 用到
 - [ ] zk 中的名次解释
   - [✅] [证明](./other/证明.md)
   - [✅] [见证](./other/witness.md)
@@ -46,13 +46,13 @@ https://github.com/CJ-Labs/cryptography-go
 - [ ] 证明系统
   - [ ] [Sigma协议](./sigma协议.md)
   - [✅] [零知识证明协议](./13.零知识证明协议.md)
-  
   - [🪜] [zk-SNARK协议](./14.zk-SNARK协议.md)
   - [✅] [Groth16](./15.Grot16.md)
   - [🪜] [Plonk](./18.Plonk.md)
-  - [ ] [zk-STARK](./19.zk-STARK.md)
   - [ ] [Plonky2]()  [Plonk](./18.Plonk.md) + [FRI承诺](./promise/5.FRI承诺.md)
-  - []  [Plonky3]() Plonky2 的改进版，官网没更新完
+  - [ ]  [Plonky3]() Plonky2 的改进版，官网没更新完
+  - [🪜] [zk-STARK](./19.zk-STARK.md)
+  - [🪜]  [Bulletproofs 范围证明](./Bulletproofs.md)
 - [ ] zk Rollup 项目
   - [] [poloygon-zkevm]()
   - [] [scroll]
