@@ -4,6 +4,7 @@
 https://github.com/CJ-Labs/cryptography-go
 ## 学习清单
 - [🪜] [认识Zero-Knowledge](./1.认识zk.md)
+- [🪜] [零知识证明科普入门](零知识证明科普.md)
 - [✅] 基础数学
   - [✅] [群&有限域](./basicMath/1.群&有限域.md)
   - [✅] [离散对数](./basicMath/2.离散对数问题.md)
@@ -26,14 +27,17 @@ https://github.com/CJ-Labs/cryptography-go
   - [✅] [Pedersen承诺](./promise/2.Pedersen承诺.md)
   - [✅] [KZG多项式承诺](./promise/3.kzg多项式承诺.md) Plonk用到
   - [🪜] [Poseidon哈希函数](./promise/4.Poseidon哈希函数.md)
-  - [ ] [FRI承诺]() ZK-STARK 用到
+  - [ ] [FRI承诺](./promise/5.FRI承诺.md) `ZK-STARK` 和 `Plonky2` 用到
   - [ ] [IPA承诺]() Halo2 用到
 - [ ] zk 中的名次解释
   - [✅] [证明](./other/证明.md)
   - [✅] [见证](./other/witness.md)
-  - [✅] [非交互式](./other/非交互式.md)
+  - [✅] [非交互式](./other/非交互式.md) 常见的非交互式 包含 `Fiat-Shamir` 和 `CRS (Common Reference String)`
+  - [🪜] [CRS (Common Reference String)](./other/CRS.md)
 - [✅] 电路系统
+    程序逻辑 → 门电路 → 算术电路 → R1CS → QAP → 零知识证明
   - [✅] [门电路](./circuit/1.门电路.md)
+  - [✅] [算术电路](./circuit/算术电路.md)
   - [✅] [约束系统](./circuit/2.约束系统.md)
   - [✅] [R1CS](./circuit/3.R1CS.md)
   - [✅] [QAP](./circuit/4.QAP.md)
@@ -47,6 +51,13 @@ https://github.com/CJ-Labs/cryptography-go
   - [✅] [Groth16](./15.Grot16.md)
   - [🪜] [Plonk](./18.Plonk.md)
   - [ ] [zk-STARK](./19.zk-STARK.md)
+  - [ ] [Plonky2]()  [Plonk](./18.Plonk.md) + [FRI承诺](./promise/5.FRI承诺.md)
+  - []  [Plonky3]() Plonky2 的改进版，官网没更新完
+- [ ] zk Rollup 项目
+  - [] [poloygon-zkevm]()
+  - [] [scroll]
+
+- [] zkp 跨链项目
 - [ ] 参考实战项目 [ZKMerkle Proof of Solvency](https://github.com/leo-shi-dacheng/zkmerkle-proof-of-solvency)
   - [✅] [ZKMerkle Proof of Solvency 项目解析](./zkmerkle-proof-of-solvency/1.项目解析.md)
   - [✅] [如何编写电路](./zkmerkle-proof-of-solvency/如何编写电路.md)
